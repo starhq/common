@@ -34,7 +34,7 @@ public final class ConnectionManager {
 	 * 暂支持mysql,oracle,sqlserver
 	 */
 	public static Connection getConnection(final String url, final String user, final String password) {
-		Assert.isTrue(!StringUtil.isBlank(url) && StringUtil.isBlank(user),
+		Assert.isTrue(!StringUtil.isBlank(url) && !StringUtil.isBlank(user),
 				"get connection failure,the input url or user is null");
 		String driverManager;
 		if (url.indexOf("mysql") >= 0) {
