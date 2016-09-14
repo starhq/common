@@ -42,7 +42,6 @@ public final class ZipUtil {
 	/**
 	 * 压缩文件
 	 * 
-	 * @throws IOException
 	 */
 	public static void zip(final Path src, final Path dest, final boolean withSrcDir) {
 		validateFile(src, dest);

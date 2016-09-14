@@ -18,6 +18,7 @@ public final class EscapeUtil {
 	 * Escape编码（Unicode）
 	 * 
 	 * @param content
+	 *            原始字符串
 	 * 
 	 * @return 编码后的字符串
 	 * 
@@ -56,6 +57,7 @@ public final class EscapeUtil {
 	 * Escape解码
 	 * 
 	 * @param content
+	 *            原始字符串
 	 * 
 	 * @return 解码后的字符串
 	 * 

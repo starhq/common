@@ -77,7 +77,8 @@ public class FastByteArrayOutputStream extends OutputStream {
 	/**
 	 * 将快速缓冲区内容写入输出流
 	 * 
-	 * @param out
+	 * @param outputStream
+	 *            输出流
 	 */
 	public void writeTo(final OutputStream outputStream) {
 		final int index = buffer.index();

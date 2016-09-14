@@ -323,7 +323,7 @@ public final class HttpUtil {
 
 	/**
 	 * 
-	 * 检测给定字符串是否为未知，多用于检测HTTP请求相关<br/>
+	 * 检测给定字符串是否为未知，多用于检测HTTP请求相关
 	 * 
 	 */
 	public static boolean isUnknow(final String checkString) {

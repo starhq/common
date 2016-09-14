@@ -29,6 +29,10 @@ public final class BeanUtils {
 
 	/**
 	 * 获得bean的PropertyDescriptor
+	 * 
+	 * @param clazz
+	 *            要查询的类
+	 * @return PropertyDescriptor数组
 	 */
 	public static PropertyDescriptor[] getPropertyDescriptors(final Class<?> clazz) {
 		Assert.notNull(clazz, "get class's propertyDescriptor array failure,the clazz is null");
@@ -44,6 +48,10 @@ public final class BeanUtils {
 
 	/**
 	 * 对象转map
+	 * 
+	 * @param instance
+	 *            实例
+	 * @return 实例的键值对
 	 */
 	public static <T> Map<String, Object> beanToMap(final T instance) {
 		Assert.notNull(instance, "instance to map failure,the instance is null");
@@ -69,6 +77,12 @@ public final class BeanUtils {
 
 	/**
 	 * map转对象
+	 * 
+	 * @param maps
+	 *            键值对
+	 * @param beanClass
+	 *            要转换成的类
+	 * @return 设置好参数的对象
 	 */
 	public static <T> T mapToBean(final Map<String, Object> maps, final Class<T> beanClass) {
 		Assert.notEmpty(maps, "map to instance failue,the map is empty");
@@ -85,6 +99,15 @@ public final class BeanUtils {
 
 	/**
 	 * 为对象设置简单属性
+	 * 
+	 * @param instance
+	 *            实例
+	 * @param name
+	 *            属性名
+	 * @param value
+	 *            值
+	 * @param desc
+	 *            PropertyDescriptors实例
 	 */
 	public static <T> void setSimpleProperty(final T instance, final String name, final Object value,
 			final PropertyDescriptor desc) {
@@ -107,6 +130,14 @@ public final class BeanUtils {
 
 	/**
 	 * 获取对象的简单属性
+	 * 
+	 * @param instance
+	 *            实例
+	 * @param name
+	 *            属性名
+	 * @param desc
+	 *            PropertyDescriptors实例
+	 * @return 对应属性的值
 	 */
 	public static <T> Object getSimpleProperty(final T instance, final String name, final PropertyDescriptor desc) {
 		Assert.notNull(instance, StringUtil.format("get filed {}'s value failure:the instance is null ", name));
@@ -127,19 +158,30 @@ public final class BeanUtils {
 	}
 
 	/**
-	 * 复制Bean对象属性<br>
+	 * 复制Bean对象属性
+	 * 
+	 * @param source
+	 *            源
+	 * @param target
+	 *            目标
+	 * @param ignoreProperties
+	 *            忽略的属性值
 	 */
 	public static void copyProperties(final Object source, final Object target, final String... ignoreProperties) {
 		copyProperties(source, target, null, ignoreProperties);
 	}
 
 	/**
+	 * 复制Bean对象属性
 	 * 
-	 * 复制Bean对象属性<br>
-	 * 
-	 * 限制类用于限制拷贝的属性，例如一个类我只想复制其父类的一些属性，就可以将editable设置为父类
-	 * 
-	 * ignoreProperties不拷贝的属性
+	 * @param source
+	 *            源
+	 * @param target
+	 *            目标
+	 * @param editable
+	 *            target的父类，只复制target父类中的属性
+	 * @param ignoreProperties
+	 *            忽略的属性值
 	 */
 	public static void copyProperties(final Object source, final Object target, final Class<?> editable,
 			final String... ignoreProperties) {

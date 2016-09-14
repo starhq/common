@@ -40,13 +40,13 @@ public final class StringUtil {
 
 	/** 空格转移 */
 	public static final String HTML_NBSP = "&nbsp;";
-	/** &转义 */
+	/** 分号转义 */
 	public static final String HTML_AMP = "&amp;";
-	/** "转义 */
+	/** 引号转义 */
 	public static final String HTML_QUOTE = "&quot;";
-	/** <转义 */
+	/** 小于转义 */
 	public static final String HTML_LT = "&lt;";
-	/** >转义 */
+	/** 大于转义 */
 	public static final String HTML_GT = "&gt;";
 	/** 空json */
 	public static final String EMPTY_JSON = "{}";
@@ -309,7 +309,7 @@ public final class StringUtil {
 	}
 
 	/**
-	 * HelloWorld->hello_world
+	 * HelloWorld-&gt;hello_world
 	 */
 	public static String toUnderlineCase(final String camelCaseStr) {
 		Assert.notNull(camelCaseStr,
@@ -338,7 +338,7 @@ public final class StringUtil {
 	}
 
 	/**
-	 * hello_world->HelloWorld
+	 * hello_world-&gt;HelloWorld
 	 */
 	public static String toCamelCase(final String name) {
 		Assert.notNull(name, "string with underline convert to camelCaseStr failure,the input string is null");

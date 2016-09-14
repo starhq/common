@@ -24,6 +24,12 @@ public final class ArrayUtil {
 	 * 以 conjunction 为分隔符将数组转换为字符串
 	 * 
 	 * jdk1.8用stringjoiner
+	 * 
+	 * @param array
+	 *            数组
+	 * @param conjunction
+	 *            分隔符
+	 * @return 组装后的字符串
 	 */
 	public static <T> String join(final T[] array, final char conjunction) {
 		Assert.notEmpty(array, "array join to string failure,the array is empty");
@@ -41,7 +47,15 @@ public final class ArrayUtil {
 	}
 
 	/**
-	 * 生成一个新的重新设置大小的数组
+	 * 数组扩容
+	 * 
+	 * @param buffer
+	 *            原始数组
+	 * @param newSize
+	 *            增加多少空间
+	 * @param componentType
+	 *            数组元素类型
+	 * @return 扩容后的数组
 	 */
 	public static <T> T[] resize(final T[] buffer, final int newSize, final Class<?> componentType) {
 		Assert.notNull(buffer, "resize array failure,the array is null");
@@ -52,6 +66,12 @@ public final class ArrayUtil {
 
 	/**
 	 * 新建一个空数组
+	 * 
+	 * @param componentType
+	 *            数组元素的类型
+	 * @param newSize
+	 *            数组大小
+	 * @return 空数组
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T[] newArray(final Class<?> componentType, final int newSize) {

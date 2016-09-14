@@ -52,7 +52,7 @@ public final class HexUtil {
 	/**
 	 * 单个数字转换为16进制字符串
 	 * 
-	 * @param i
+	 * @param data
 	 * @return
 	 */
 	public static String byte2Hex(final byte data) {

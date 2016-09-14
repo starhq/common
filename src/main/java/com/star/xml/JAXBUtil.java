@@ -67,7 +67,6 @@ public final class JAXBUtil {
 	/**
 	 * xml转对象
 	 * 
-	 * @throws JAXBException
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T xml2Object(final Class<T> clazzz, final String xml) {

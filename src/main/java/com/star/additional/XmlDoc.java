@@ -280,9 +280,13 @@ public final class XmlDoc {
 	}
 
 	/**
-	 * 
 	 * 格式化XML输出串.
 	 * 
+	 * @param e
+	 *            xml元素
+	 * @param indent
+	 *            缩进
+	 * @return xml字符串
 	 */
 	public static synchronized String formatXml(Element e, int indent) {
 		indent++;

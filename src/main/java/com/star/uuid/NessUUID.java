@@ -11,11 +11,6 @@ import com.star.string.HexUtil;
  * 
  * @author rolfl
  * 
- * @url http://codereview.stackexchange.com/questions/19860/improving-the-java-
- *      uuid-class-performance
- * 
- *      测试过1kw没有重复的
- *
  */
 public final class NessUUID {
 
@@ -121,7 +116,7 @@ public final class NessUUID {
 	/**
 	 * 取代jdk中uuid的对应方法
 	 * 
-	 * @param str
+	 * @param uuid
 	 * @return
 	 */
 	public static String toString(final UUID uuid) {

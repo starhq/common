@@ -80,7 +80,7 @@ public final class XmlUtil {
 	}
 
 	/**
-	 * 将XML文档转换为String<
+	 * 将XML文档转换为String
 	 */
 	public static String toStr(final Document doc, final String charset) {
 		final StringWriter writer = new StringWriter();

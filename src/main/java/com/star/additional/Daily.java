@@ -14,9 +14,11 @@ public final class Daily {
 	}
 
 	/**
-	 * 
 	 * 功能描述：判断是否为质数
 	 * 
+	 * @param x
+	 *            要判断的数
+	 * @return 是否为质数
 	 */
 	public static boolean isPrime(int x) {
 		if (x <= 7) {
@@ -69,9 +71,11 @@ public final class Daily {
 	}
 
 	/**
-	 * 
 	 * 功能描述：人民币转成大写
 	 * 
+	 * @param str
+	 *            人民币金额
+	 * @return 大写金额
 	 */
 	public static String hangeToBig(String str) {
 		double value;
@@ -159,9 +163,11 @@ public final class Daily {
 	}
 
 	/**
-	 * 
 	 * 把手机叫转成139****1234
 	 * 
+	 * @param str
+	 *            原手机号
+	 * @return 处理过的手机号
 	 */
 	public static String getPhoneNumber(final String str) {
 		String result = str;

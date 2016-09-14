@@ -74,7 +74,7 @@ public final class CollectionUtil {
 	/**
 	 * 初始化hashmap
 	 * 
-	 * initialCapacity=0,默认initialCapacity>0,采用initialCapacity大小初始化
+	 * initialCapacity=0,默认initialCapacity&gt;0,采用initialCapacity大小初始化
 	 */
 	public static <K, V> Map<K, V> getMap(final Integer initialCapacity) {
 		return Objects.isNull(initialCapacity) ? new HashMap<>() : new HashMap<>(initialCapacity);
@@ -83,7 +83,7 @@ public final class CollectionUtil {
 	/**
 	 * 初始化ConcurrentHashMap
 	 * 
-	 * initialCapacity=0,默认initialCapacity>0,采用initialCapacity大小初始化
+	 * initialCapacity=0,默认initialCapacity&gt;0,采用initialCapacity大小初始化
 	 */
 	public static <K, V> Map<K, V> getConcurrentMap(final Integer initialCapacity) {
 		return Objects.isNull(initialCapacity) ? new ConcurrentHashMap<K, V>()
@@ -93,7 +93,7 @@ public final class CollectionUtil {
 	/**
 	 * 初始化LinkedHashMap
 	 * 
-	 * initialCapacity=0,默认initialCapacity>0,采用initialCapacity大小初始化
+	 * initialCapacity=0,默认initialCapacity&gt;0,采用initialCapacity大小初始化
 	 */
 	public static <K, V> Map<K, V> getLinkedMap(final Integer initialCapacity) {
 		return Objects.isNull(initialCapacity) ? new LinkedHashMap<K, V>() : new LinkedHashMap<K, V>(initialCapacity);
@@ -109,7 +109,7 @@ public final class CollectionUtil {
 	/**
 	 * 初始化ArrayList
 	 * 
-	 * initialCapacity=0,默认initialCapacity>0,采用initialCapacity大小初始化
+	 * initialCapacity=0,默认initialCapacity&gt;0,采用initialCapacity大小初始化
 	 */
 	public static <T> List<T> getList(final Integer initialCapacity) {
 		return Objects.isNull(initialCapacity) ? new ArrayList<T>() : new ArrayList<T>(initialCapacity);
@@ -125,7 +125,7 @@ public final class CollectionUtil {
 	/**
 	 * 初始化HashSet
 	 * 
-	 * initialCapacity=0,默认initialCapacity>0,采用initialCapacity大小初始化
+	 * initialCapacity=0,默认initialCapacity&gt;0,采用initialCapacity大小初始化
 	 */
 	public static <T> Set<T> getHashSet(final Integer initialCapacity) {
 		return Objects.isNull(initialCapacity) ? new HashSet<T>() : new HashSet<T>(initialCapacity);

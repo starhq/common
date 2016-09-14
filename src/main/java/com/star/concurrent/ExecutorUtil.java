@@ -69,7 +69,7 @@ public final class ExecutorUtil {
 	}
 
 	/**
-	 * 执行有返回值的异步方法<br/>
+	 * 执行有返回值的异步方法
 	 */
 	public static <T> Future<T> execAsync(final Callable<T> task) {
 		return executor.submit(task);

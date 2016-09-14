@@ -35,6 +35,9 @@ public class BoundedPriorityQueue<E> extends PriorityQueue<E> {
 
 	/**
 	 * 构造方法
+	 * 
+	 * @param capacity
+	 *            队列大小
 	 */
 	public BoundedPriorityQueue(final int capacity) {
 		this(capacity, null);
@@ -42,6 +45,11 @@ public class BoundedPriorityQueue<E> extends PriorityQueue<E> {
 
 	/**
 	 * 构造方法
+	 * 
+	 * @param capacity
+	 *            队列大小
+	 * @param comparator
+	 *            比较器
 	 */
 	public BoundedPriorityQueue(final int capacity, final Comparator<? super E> comparator) {
 		super(capacity, new Comparator<E>() {
@@ -69,14 +77,12 @@ public class BoundedPriorityQueue<E> extends PriorityQueue<E> {
 	}
 
 	/**
+	 * 入队列，当队列满时，淘汰末尾元素
 	 * 
-	 * 加入元素，当队列满时，淘汰末尾元素
-	 * 
-	 * @param e
+	 * @param ele
 	 *            元素
 	 * 
-	 * @return 加入成功与否
-	 * 
+	 * @return 成功与否
 	 */
 	@Override
 	public boolean offer(final E ele) {
@@ -94,8 +100,11 @@ public class BoundedPriorityQueue<E> extends PriorityQueue<E> {
 	}
 
 	/**
+	 * 多个元素如队列
 	 * 
-	 * 添加多个元素<br>
+	 * @param array
+	 *            多个元素
+	 * @return 成功与否
 	 */
 	@SuppressWarnings("unchecked")
 	public boolean addAll(final E... array) {
@@ -105,17 +114,15 @@ public class BoundedPriorityQueue<E> extends PriorityQueue<E> {
 	/**
 	 * 
 	 * @return 返回排序后的列表
-	 * 
 	 */
 	public List<E> toList() {
 		final ArrayList<E> list = new ArrayList<E>(this);
 		Collections.sort(list, comparator);
-
 		return list;
 	}
 
 	/**
-	 * 返回迭代器
+	 * @return 返回迭代器
 	 */
 	@Override
 	public Iterator<E> iterator() {

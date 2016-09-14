@@ -27,6 +27,13 @@ public final class XMLReaderWriter {
 
 	/**
 	 * 单个对象转储xml，写进文本
+	 * 
+	 * @param path
+	 *            文件路径
+	 * @param instance
+	 *            对象
+	 * @param append
+	 *            是否添加
 	 */
 	public static <T> void writeSingle(final String path, final T instance, final boolean append) {
 		FileOutputStream fileOutputStream;
@@ -43,6 +50,10 @@ public final class XMLReaderWriter {
 
 	/**
 	 * 从文本中读取对象
+	 * 
+	 * @param path
+	 *            文件路径
+	 * @return 读取的对象
 	 */
 	public static <T> T readSingle(final String path) {
 		FileInputStream fileInput;
@@ -61,6 +72,13 @@ public final class XMLReaderWriter {
 
 	/**
 	 * 多个对象转储xml，写进文本
+	 * 
+	 * @param path
+	 *            路径
+	 * @param instances
+	 *            对象集合
+	 * @param append
+	 *            是否添加
 	 */
 	public static <T> void writeMulit(final String path, final List<T> instances, final boolean append) {
 		FileOutputStream fileOutput;
@@ -77,6 +95,10 @@ public final class XMLReaderWriter {
 
 	/**
 	 * 从文本中读取对象
+	 * 
+	 * @param path
+	 *            路径
+	 * @return 对象集合
 	 */
 	public static <T> List<T> readMulti(final String path) {
 		FileInputStream fileInput;

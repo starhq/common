@@ -27,6 +27,10 @@ public final class ClassUtil {
 
 	/**
 	 * 获得对象数组的类数组
+	 * 
+	 * @param objects
+	 *            实例数组
+	 * @return 对象数据
 	 */
 	public static Class<?>[] getClasses(final Object... objects) {
 		Assert.notEmpty(objects, "get instance's type array failure,the object's array is empty");
@@ -39,7 +43,13 @@ public final class ClassUtil {
 
 	// ======================实例化======================
 	/**
-	 * 实例化对象,要注意基本类型int的话要改成integer
+	 * 实例化对象,一些构造方法的例如int等属性药改成包装类
+	 * 
+	 * @param clazz
+	 *            类
+	 * @param params
+	 *            构造参数
+	 * @return 实体对象
 	 */
 	public static <T> T newInstance(final Class<T> clazz, final Object... params) {
 		Assert.notNull(clazz, "newinstance failue,the clazz is null");
@@ -63,6 +73,8 @@ public final class ClassUtil {
 	// =====================classloader==============================
 	/**
 	 * 获取当前线程的classloader
+	 * 
+	 * @return 当前classloader
 	 */
 	public static ClassLoader getContextClassLoader() {
 		return Thread.currentThread().getContextClassLoader();
@@ -70,6 +82,8 @@ public final class ClassUtil {
 
 	/**
 	 * 获取当前线程的classloader,若不存在获取类的classLoader
+	 * 
+	 * @return 获得classloader
 	 */
 	public static ClassLoader getClassLoader() {
 		final ClassLoader classLoader = getContextClassLoader();
@@ -78,6 +92,12 @@ public final class ClassUtil {
 
 	/**
 	 * 加载类
+	 * 
+	 * @param className
+	 *            全路径类名
+	 * @param isInitialized
+	 *            是否初始化
+	 * @return 实体对象
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> Class<T> loadClass(final String className, final boolean isInitialized) {
@@ -92,6 +112,10 @@ public final class ClassUtil {
 
 	/**
 	 * 加载类并初始化
+	 * 
+	 * @param className
+	 *            全路径类名
+	 * @return 实体对象
 	 */
 	public static <T> Class<T> loadClass(final String className) {
 		return loadClass(className, true);
@@ -104,6 +128,10 @@ public final class ClassUtil {
 	 * 
 	 * 获得ClassPath
 	 * 
+	 * @param packageName
+	 *            报名
+	 * 
+	 * @return 所有类路径字符串
 	 */
 	public static Set<String> getClassPaths(final String packageName) {
 		final String packagePath = packageName.replace(StringUtil.DOT, StringUtil.SLASH);
@@ -124,6 +152,8 @@ public final class ClassUtil {
 	 * 获得Java ClassPath路径
 	 * 
 	 * 这个作用不明啊
+	 * 
+	 * @return Java ClassPath路径
 	 */
 	public static String[] getJavaClassPaths() {
 		return System.getProperty("java.class.path").split(System.getProperty("path.separator"));
@@ -135,6 +165,9 @@ public final class ClassUtil {
 	 * 
 	 * classpath直接传给空，要路径再加个getPath()
 	 * 
+	 * @param resource
+	 *            资源名
+	 * @return 资源的url
 	 */
 	public static URL getURL(final String resource) {
 		return getClassLoader().getResource(resource);
