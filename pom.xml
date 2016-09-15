@@ -23,7 +23,6 @@
 	<scm>
 		<connection>scm:git:git@github.com:starhq/common.git</connection>
 		<developerConnection>scm:git:git@github.com:starhq/common.git</developerConnection>
-		<!-- <url>git@github.com:starhq/common.git</url> -->
 		<url>https://github.com/starhq/common.git</url>
 	</scm>
 	<properties>
