@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.starhq</groupId>
 	<artifactId>common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>common</name>
 	<description>some utility class for java develop</description>
 	<url>https://github.com/starhq/common</url>
@@ -24,6 +24,7 @@
 		<connection>scm:git:git@github.com:starhq/common.git</connection>
 		<developerConnection>scm:git:git@github.com:starhq/common.git</developerConnection>
 		<url>git:git@github.com:starhq/common.git</url>
+		<tag>HEAD</tag>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -129,11 +130,11 @@
 			<distributionManagement>
 				<snapshotRepository>
 					<id>oss</id>
-					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 				</snapshotRepository>
 				<repository>
 					<id>oss</id>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 				</repository>
 			</distributionManagement>
 		</profile>
