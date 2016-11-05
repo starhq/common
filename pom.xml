@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.starhq</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>common</name>
     <description>some utility class for java develop</description>
     <url>https://github.com/starhq/common</url>
