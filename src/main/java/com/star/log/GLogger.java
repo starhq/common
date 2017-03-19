@@ -33,8 +33,7 @@ public final class GLogger {
 
     static {
         try {
-            Config config = new Config("config.properties");
-            logLevel = toLogLevel(config.getString("log.level", "INFO"));
+            logLevel = toLogLevel(Config.getString("log.level", "INFO"));
         } catch (ToolException e) {
             GLogger.warn("no log level Specify,use default level");
         }
