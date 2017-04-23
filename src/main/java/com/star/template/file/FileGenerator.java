@@ -95,7 +95,6 @@ public final class FileGenerator {
                                 path = Paths.get(pathString);
                                 template.renderTo(Files.newBufferedWriter(path));
                                 template.renderTo(Files.newBufferedWriter(path, StandardOpenOption.TRUNCATE_EXISTING));
-//                                System.out.println(template.render());
 
                             } else {
                                 if (pathString.contains(PACK)) {
